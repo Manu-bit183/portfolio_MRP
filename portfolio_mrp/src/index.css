@@ -1,0 +1,259 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f9fafb;
+  color: #374151;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  z-index: 50;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4f46e5;
+}
+
+.header nav {
+  display: none;
+}
+
+.header nav a {
+  color: #374151;
+  text-decoration: none;
+  margin-right: 2rem;
+}
+
+.header nav a:hover {
+  color: #4f46e5;
+}
+
+/* Hero Section */
+.hero {
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  background: linear-gradient(to bottom right, #e0e7ff, #e9d5ff);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero h2 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero .subtitle {
+  font-size: 1.25rem;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+}
+
+.hero .description {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+.hero .buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.hero .btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.hero .btn-primary {
+  background-color: #1f2937;
+  color: white;
+}
+
+.hero .btn-primary:hover {
+  background-color: #374151;
+}
+
+.hero .btn-secondary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.hero .btn-secondary:hover {
+  background-color: #1d4ed8;
+}
+
+/* About Section */
+.about {
+  padding: 5rem 0;
+  background-color: white;
+}
+
+.about h2 {
+  font-size: 1.875rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about .content {
+  max-width: 768px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about .content p {
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.75rem;
+}
+
+.about .tags {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.about .tag {
+  background-color: #e0e7ff;
+  color: #4f46e5;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Skill Animations */
+.skill-progress {
+  transition: width 1s ease-out;
+}
+
+.skill-card {
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.floating-badge {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-10px) rotate(2deg); }
+  50% { transform: translateY(-5px) rotate(-1deg); }
+  75% { transform: translateY(-15px) rotate(1deg); }
+}
+
+/* Pulse effect for skill percentages */
+.skill-percentage {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* Footer */
+.footer {
+  background-color: #1f2937;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer .social-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.footer .social-links a {
+  color: white;
+  transition: color 0.3s;
+}
+
+.footer .social-links a:hover {
+  color: #a5b4fc;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .header nav {
+    display: flex;
+  }
+  
+  .hero .container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .hero .buttons {
+    margin-top: 0;
+  }
+  
+  .hero h2 {
+    font-size: 3rem;
+  }
+  
+  .hero .subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .hero .image {
+    width: 20rem;
+    height: 20rem;
+  }
+}
